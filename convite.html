@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Convidados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        select, button {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #e9ecef;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+
+            select, button {
+                font-size: 14px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Confirmação de Convidados</h1>
+    <form id="guestForm">
+        <label for="guestSelect">Selecione seu nome:</label>
+        <select id="guestSelect" required>
+            <option value="">-- Selecione --</option>
+        </select>
+
+        <label for="companionsSelect">Selecione os acompanhantes:</label>
+        <select id="companionsSelect" multiple>
+            <!-- Opções serão adicionadas via JavaScript -->
+        </select>
+
+        <button type="submit">Confirmar Presença</button>
+    </form>
+
+    <h2>Lista de Confirmados</h2>
+    <ul id="guestList"></ul>
+
+</body>
+</html>
